@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  title: string = 'task list';
+  title: string = 'Task list';
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  toggleAddTask(){
+    console.log("toggleAddTask");
+  }
 }
