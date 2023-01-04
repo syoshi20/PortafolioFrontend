@@ -1,2 +1,0 @@
-# PortafolioFrontend
-Repositorio del frontend
