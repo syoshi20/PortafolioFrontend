@@ -16,3 +16,8 @@ fa-icon.icon1:hover{
 fa-icon.icon2:hover{
     background: #c9510c;
 }
+.banner{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
