@@ -1,0 +1,17 @@
+.material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 30;
+    position: relative;
+    float: right;
+    align-items: center;
+    cursor: pointer;
+}
+.material-symbols-outlined:hover{
+    background-color: rgb(112, 212, 87);
+}
+
+ 
+

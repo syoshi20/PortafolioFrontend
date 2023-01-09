@@ -10,6 +10,8 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { SkillComponent } from './components/skill/skill.component';
 
 import{ NgCircleProgressModule } from 'ng-circle-progress';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { BotonesComponent } from './components/botones/botones.component';
 
 @NgModule({
   declarations: [
@@ -18,28 +20,15 @@ import{ NgCircleProgressModule } from 'ng-circle-progress';
     AcercaDeComponent,
     ExperienciasComponent,
     EducacionComponent,
-    SkillComponent
+    SkillComponent,
+    ProyectosComponent,
+    BotonesComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
     NgCircleProgressModule.forRoot({
-      "radius": 60,
-      "space": -10,
-      "outerStrokeGradient": true,
-      "outerStrokeWidth": 10,
-      "outerStrokeColor": "#1d66b4",
-      "outerStrokeGradientStopColor": "#7abdff",
-      "innerStrokeColor": "#e7e8ea",
-      "innerStrokeWidth": 10,
-      "title": "UI",
-      "animateTitle": false,
-      "animationDuration": 1000,
-      "showUnits": false,
-      "showBackground": false,
-      "clockwise": false,
-      "startFromZero": false,
-      "lazy": true})
+      "showSubtitle": false})
   ],
   providers: [],
   bootstrap: [AppComponent]
