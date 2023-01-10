@@ -3,12 +3,44 @@
     <div class="card-header">Hard and soft skill
       <app-botones color="grey" ></app-botones>
     </div>
-    <div class="card-body">
-      <h4 class="card-title">Hard skill</h4>   
-      <circle-progress
-  [percent]="30"
- 
-></circle-progress>  
-<h4 class="card-title">Soft skill</h4>  
-    </div>
+  <div class="card-body">
+        <h4 class="card-title">Hard skill</h4>   
+     
+        <div class="row">
+          <div class="col-sm-6 col-md-3">
+            <circle-progress
+            [percent]="30"
+            ></circle-progress>
+            <h4 style="margin-left: 80px;">One</h4>         
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <circle-progress
+            [percent]="30"
+            ></circle-progress>
+            2          
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <circle-progress
+            [percent]="30"
+            ></circle-progress>
+            3          
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <circle-progress
+            [percent]="30"
+            ></circle-progress>
+            4           
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <circle-progress
+            [percent]="60"
+            ></circle-progress>
+            5           
+          </div>
+        </div>
+      
+    
+    
+        <h4 class="card-title">Soft skill</h4>  
   </div>
+</div>

@@ -1,8 +1,6 @@
 * {
     box-sizing: border-box;
   }
- 
-
   
   /* Container for flexboxes */
   section {
@@ -34,12 +32,13 @@
     padding: 10px;
   }
   
-
-  
   /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
   @media (max-width: 600px) {
     section {
       -webkit-flex-direction: column;
       flex-direction: column;
     }
+  }
+  .material-symbols-outlined:hover{
+    color: orange;
   }
