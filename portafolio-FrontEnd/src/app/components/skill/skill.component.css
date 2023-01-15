@@ -35,3 +35,9 @@
     max-width: 100%;
   }
 }
+
+.tarjeta{
+  width: 90%; 
+  height:  98%; 
+  border-style: outset;
+}
