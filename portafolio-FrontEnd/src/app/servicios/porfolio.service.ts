@@ -15,4 +15,12 @@ export class PorfolioService {
   obtenerDatos():Observable<any>{
     return this.http.get<any>(this.apiUrl);
   }
+  modificarDatos(id:number){
+
+  }
+
+  deleteDato(id:number):Observable<any>{
+    const url= '${this.apiUrl}/${id}';
+    return this.http.delete<any>(url)
+  }
 }

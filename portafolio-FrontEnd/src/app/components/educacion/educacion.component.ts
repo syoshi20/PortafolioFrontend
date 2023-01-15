@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Output, EventEmitter, Input } from '@angular/core';
+import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
 @Component({
   selector: 'app-educacion',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducacionComponent implements OnInit {
 
-  constructor() { }
+ @Input() miPorfolio:any;
+ @Output() onDeleteEdu:EventEmitter<any>= new EventEmitter()
+
+  constructor(private datosPorfolio:PorfolioService) { }
 
   ngOnInit(): void {
+    this.datosPorfolio.obtenerDatos().subscribe((data:any) =>{
+      console.log(data);
+      this.miPorfolio=data;
+      
+    }); 
   }
 
+  onDelete(){
+   
+  }
 }
