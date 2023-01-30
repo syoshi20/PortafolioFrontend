@@ -6,8 +6,8 @@
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
       <ul class="items-list">
-        <li> 
-          <h4 class="card-title">Titulo
+        <li  *ngFor="let edu of educacionList"> 
+          <h4 class="card-title">{{edu.titulo}}
             <i  class="material-symbols-outlined" style="margin-left: 45%; color: orange ;">
             edit
             </i>
@@ -16,10 +16,10 @@
             </i>
           </h4> 
 
-          <p class="card-text">Nombre de instituto<img src="" style="padding-left: 120px;">logo</p>
-          <p>Estado</p>
-          <b>Desde: </b><time datetime="" style="color: grey;">YYYY-MM</time>
-          <b> Hasta: </b><time datetime=""style="color: grey">YYYY-MM</time>
+          <p class="card-text">{{edu.nombreInstituto}}<img src="" style="padding-left: 120px;">logo</p>
+          <p>{{edu.estado}}</p>
+          <b>Desde: </b><time datetime="" style="color: grey;">{{edu.desde}}</time>
+          <b> Hasta: </b><time datetime=""style="color: grey">{{edu.hasta}}</time>
         </li>  
       </ul>
     </div>

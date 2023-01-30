@@ -8,7 +8,7 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class EducacionComponent implements OnInit {
 
- @Input() miPorfolio:any;
+ @Input() educacionList:any;
  @Output() onDeleteEdu:EventEmitter<any>= new EventEmitter()
 
   constructor(private datosPorfolio:PorfolioService) { }
@@ -16,7 +16,7 @@ export class EducacionComponent implements OnInit {
   ngOnInit(): void {
     this.datosPorfolio.obtenerDatos().subscribe((data:any) =>{
       console.log(data);
-      this.miPorfolio=data;
+      this.educacionList=data.educacion;
       
     }); 
   }

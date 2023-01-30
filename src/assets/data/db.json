@@ -1,0 +1,50 @@
+{
+
+	"id": 1,
+	"nombre": "asd",
+	"apellido": "afefew",
+	"titulo": ["ingeniero", "programador"],
+	"fotoUrl": "foto",
+	"ubicacion": "BUenos Aires",
+	"acercaDe": "descripcion gthujdr ttttjdjtdryjutrydjuytkijytuktykitykityduijtyitye",
+	"educacion": [{
+		"nombreInstituto": "Argentina programa",
+		"titulo": "Programador web",
+		"desde": "1551-21-21",
+		"hasta": "545-1-2020",
+		"estado": true,
+		"urlLogo": "logo"
+	     }],
+	"experiencia":[{
+		"nombreEmpresa":"Ginza",
+		"puesto":"camarero",
+		"descripcion":"atencion al ",
+		"desde":"4541-2-12",
+		"hasta":"154-12-3"	
+	  }
+	 ],
+	 "skill":[{
+		"nombre":"angular",
+		"porcentaje":45
+		 },
+		 {
+			"nombre":"html",
+			"porcentaje":90
+		 },{
+			"nombre":"git",
+			"porcentaje":60
+		 },{
+			"nombre":"c++",
+			"porcentaje":12
+		 },{
+			"nombre":"buscar",
+			"porcentaje":50
+		 }
+	],
+	"proyecto":[{
+		"nombre":"Porfolio",
+		"descripcion":"Cv en formato pagina web",
+		"url":"pagina web"
+	}]
+
+}

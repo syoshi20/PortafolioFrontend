@@ -1,0 +1,28 @@
+<div class="card text-white bg-dark mb-3" style="width: 75rem; margin-left: 60px;">
+    <div class="card-header">Experiencias
+      <app-botones color="grey" ></app-botones>
+    </div>
+    <div class="card-body" >
+    <ul class="items-list">
+      <li *ngFor="let experiencia of experienciaList">
+        <i class="material-symbols-outlined" style="float: right; color: red;">
+          close
+          </i>
+          <div class="cuadro">
+       <h4 class="card-title">{{experiencia.nombreEmpresa}} <img src="">logo
+        <i  class="material-symbols-outlined" style="float: right; color: orange ;">
+          edit
+          </i>
+         
+          
+      </h4>
+      
+      <p class="card-text" style="color: grey;">{{experiencia.descripcion}}</p>
+      <b>Desde: </b><time datetime="" style="color: grey;">{{experiencia.desde}}</time>
+      <b> Hasta: </b><time datetime=""style="color: grey">{{experiencia.hasta}}</time>  
+          </div>
+      </li>
+    
+  </ul>
+  </div>
+</div>

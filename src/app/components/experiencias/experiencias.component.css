@@ -1,0 +1,13 @@
+.material-symbols-outlined:hover{
+    background-color: black;
+}
+.card-body{
+   display: flex;
+   
+}
+.cuadro{
+    
+    width: 65rem;
+    height: auto;
+    border-color: aliceblue;
+}

@@ -16,7 +16,7 @@
 }
 
 .column img {
-  margin-top: 8px;
+  margin-top: 15px;
   vertical-align: middle;
 }
 
@@ -39,5 +39,6 @@
 .tarjeta{
   width: 90%; 
   height:  98%; 
+  margin-top: 10px;
   border-style: outset;
 }

@@ -2,8 +2,8 @@
     <div class="card-header">Proyectos
       <app-botones color="grey" ></app-botones>
     </div>
-    <div class="card-body">
-      <h4 class="card-title">Proyecto
+    <div class="card-body" *ngFor="let proyecto of proyectoList">
+      <h4 class="card-title">{{proyecto.nombre}}
         <i  class="material-symbols-outlined" style="margin-left: 43%; color: orange ;">
           edit
           </i>
@@ -11,6 +11,7 @@
           close
           </i>
       </h4>
-      <p class="card-text">descripcion</p>
+      <p class="card-text">{{proyecto.descripcion}}</p>
+      <p class=" card-text">{{proyecto.url}}</p>
     </div>
   </div>
