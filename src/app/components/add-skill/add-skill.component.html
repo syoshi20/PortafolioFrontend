@@ -1,0 +1,24 @@
+<p>add-skill works!</p>
+<form class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label form="text">Nombre</label>
+        <input 
+            type="text" 
+            name="nombre" 
+            id="nombre" 
+            placeholder="Add nombre"
+            [(ngModel)]="nombre"
+        />
+    </div>
+    <div class="form-control">
+        <label form="text">porcentaje</label>
+        <input 
+            type="number" 
+            name="porcentaje" 
+            id="porcentaje" 
+            placeholder="Add porcentaje"
+            [(ngModel)]="porcentaje"
+        />
+    </div>
+    <input type="submit" value="Save Skill">
+</form>

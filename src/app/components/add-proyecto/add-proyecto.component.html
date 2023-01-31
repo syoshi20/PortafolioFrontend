@@ -1,0 +1,33 @@
+<form class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label form="text">Nombre</label>
+        <input 
+            type="text" 
+            name="nombre" 
+            id="nombre" 
+            placeholder="Add nombre"
+            [(ngModel)]="nombre"
+        />
+    </div>
+    <div class="form-control">
+        <label form="text">descripcion</label>
+        <input 
+            type="text" 
+            name="descripcion" 
+            id="descripcion" 
+            placeholder="Add descripcion"
+            [(ngModel)]="descripcion"
+        />
+    </div>
+    <div class="form-control">
+        <label form="text">url</label>
+        <input 
+            type="text" 
+            name="url" 
+            id="url" 
+            placeholder="Add url"
+            [(ngModel)]="url"
+        />
+    </div>
+    <input type="submit" value="Save Proyecto">
+</form>

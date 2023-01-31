@@ -1,0 +1,64 @@
+<p>add-educacion works!</p>
+<form class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label form="text">Nombre</label>
+        <input 
+            type="text" 
+            name="nombre" 
+            id="nombre" 
+            placeholder="Add nombre"
+            [(ngModel)]="nombre"
+        />
+    </div>
+    <div class="form-control">
+        <label form="text">titulo</label>
+        <input 
+            type="text" 
+            name="titulo" 
+            id="titulo" 
+            placeholder="Add titulo"
+            [(ngModel)]="titulo"
+        />
+    </div>
+    <div class="form-control">
+        <label form="text">logo</label>
+        <input 
+            type="text" 
+            name="logo" 
+            id="logo" 
+            placeholder="Add logo"
+            [(ngModel)]="logo"
+        />
+    </div>
+    <div class="form-control">
+        <label form="text">estado</label>
+        <input 
+            type="checkbox" 
+            name="estado" 
+            id="estado" 
+            placeholder="Add estado"
+            [(ngModel)]="estado"
+        />
+    </div>
+    <div class="form-control">
+        <label form="text">desde</label>
+        <input 
+            type="text" 
+            name="desde" 
+            id="desde" 
+            placeholder="Add desde"
+            [(ngModel)]="desde"
+        />
+    </div>
+    <div class="form-control">
+        <label form="text">hasta</label>
+        <input 
+            type="text" 
+            name="hasta" 
+            id="hasta" 
+            placeholder="Add hasta"
+            [(ngModel)]="hasta"
+        />
+    </div>
+    <input type="submit" value="Save Educacion">
+</form>
