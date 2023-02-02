@@ -1,28 +1,15 @@
-
 <div class="card text-white bg-secondary mb-3"  style="max-width: 75rem; margin-left: 60px;">
-    <div class="card-header">Hard and soft skill
-      <app-botones color="grey" ></app-botones>
-    </div>
-  <div class="card-body"> 
-     
-        <div class="row">
-          <div class="col-sm-6 col-md-3" *ngFor="let skill of skilList">
-            <div class="tarjeta" >
-              <i  class="material-symbols-outlined" style="float: left;margin-top: 5px;margin-left: 5px; color: orange ;">
-                edit
-                </i>
-                <i class="material-symbols-outlined" style="float: right;margin-top: 5px;margin-right: 5px ;color: red;">
-                close
-                </i>
-            <circle-progress style="display: flex;align-content: center; justify-content: center"
-            [percent]=skill.porcentaje
-            ></circle-progress>
-            <h4 style="display: flex; align-content: center; justify-content: center;">{{skill.nombre}}</h4>         
-          </div>
-          </div>
-         
-          
-        </div>
- 
+  <div class="card-header">Hard and soft skill
+    <app-botones color="grey" ></app-botones>
   </div>
+<div class="card-body"> 
+  <div class="row">
+    
+<app-item-skill class="col-sm-6 col-md-3"
+*ngFor="let skill of skilList"
+[skill]="skill" 
+>
+</app-item-skill>
+</div>
+  
 </div>

@@ -17,6 +17,11 @@ import { AddEducacionComponent } from './components/add-educacion/add-educacion.
 import { AddExperienciaComponent } from './components/add-experiencia/add-experiencia.component';
 import { AddSkillComponent } from './components/add-skill/add-skill.component';
 import { AddProyectoComponent } from './components/add-proyecto/add-proyecto.component';
+import { ItemEducacionComponent } from './components/item-educacion/item-educacion.component';
+import { ItemAcercaDeComponent } from './components/item-acerca-de/item-acerca-de.component';
+import { ItemProyectosComponent } from './components/item-proyectos/item-proyectos.component';
+import { ItemSkillComponent } from './components/item-skill/item-skill.component';
+import { ItemExperienciasComponent } from './components/item-experiencias/item-experiencias.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,12 @@ import { AddProyectoComponent } from './components/add-proyecto/add-proyecto.com
     AddEducacionComponent,
     AddExperienciaComponent,
     AddSkillComponent,
-    AddProyectoComponent
+    AddProyectoComponent,
+    ItemEducacionComponent,
+    ItemAcercaDeComponent,
+    ItemProyectosComponent,
+    ItemSkillComponent,
+    ItemExperienciasComponent
   ],
   imports: [
     BrowserModule,

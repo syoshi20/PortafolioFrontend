@@ -1,40 +1,6 @@
-<body>
-    
-    <section>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-      <nav>
-        <div class="card mb-3">
-            <h3 class="card-header">Perfil
-              <i class="material-symbols-outlined" style="float: right;">
-              edit
-              </i></h3>
-            <div class="card-body">
-              <h5 class="card-title">{{miPorfolio.titulo[0]}}</h5>
-              <h6 class="card-subtitle text-muted">{{miPorfolio.titulo[1]}}</h6>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
-              <rect width="100%" height="100%" fill="#868e96">{{miPorfolio.fotoUrl}}</rect>
-              <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Foto de Perfil</text>
-            </svg>
-            <div class="card-body">
-              <p class="card-text">Soy de {{miPorfolio.ubicacion}}</p>
-            </div>
-        </div>    
-      </nav>
-      
-      <article>
-        <div class="card bg-light mb-3" style="max-width: 57rem; margin-top: 10px;">
-            <div class="card-header">Acerca de mi
-              <i class="material-symbols-outlined" style="float: right;">
-                edit
-                </i>
-            </div>
-            <div class="card-body">
-              
-              <p class="card-text">{{miPorfolio.acercaDe}}</p>
-            </div>
-          </div>
-        
-      </article>
-    </section>
-</body>
+
+<app-item-acerca-de
+  *ngFor="let perfil of miPorfolio "
+  [perfil]="perfil"
+>
+</app-item-acerca-de> 

@@ -1,26 +1,15 @@
-<div class="card text-white bg-primary mb-3" style="max-width: 75rem; margin-left: 60px; margin-top: 1px;">
-    <div class="card-header">Educacion
-      <app-botones color="grey" ></app-botones>
-    </div>
-    <div class="card-body">
-      
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-      <ul class="items-list">
-        <li  *ngFor="let edu of educacionList"> 
-          <h4 class="card-title">{{edu.titulo}}
-            <i  class="material-symbols-outlined" style="margin-left: 45%; color: orange ;">
-            edit
-            </i>
-            <i class="material-symbols-outlined" style="float: right;margin-right: 50px; color: red;" (click)="onDelete()">
-            close
-            </i>
-          </h4> 
 
-          <p class="card-text">{{edu.nombreInstituto}}<img src="" style="padding-left: 120px;">logo</p>
-          <p>{{edu.estado}}</p>
-          <b>Desde: </b><time datetime="" style="color: grey;">{{edu.desde}}</time>
-          <b> Hasta: </b><time datetime=""style="color: grey">{{edu.hasta}}</time>
-        </li>  
-      </ul>
-    </div>
+
+<section>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<div class="card text-white bg-primary mb-3" style="max-width: 75rem; margin-left: 60px; margin-top: 1px;">
+  <div class="card-header">Educacion
+    <app-botones color="grey" ></app-botones>
   </div>
+<app-item-educacion 
+*ngFor="let educa of educacionList"
+[educa]="educa"
+>
+</app-item-educacion>
+</div>
+</section>

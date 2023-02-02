@@ -14,11 +14,11 @@ export class EducacionComponent implements OnInit {
   constructor(private datosPorfolio:PorfolioService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe((data:any) =>{
+    this.datosPorfolio.obtenerEducacion().subscribe(data =>{
       console.log(data);
-      this.educacionList=data.educacion;
+      this.educacionList=data;
       
-    }); 
+    }) 
   }
 
   onDelete(){

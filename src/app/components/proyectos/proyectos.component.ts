@@ -14,9 +14,9 @@ export class ProyectosComponent implements OnInit {
    constructor(private datosPorfolio:PorfolioService) { }
  
    ngOnInit(): void {
-     this.datosPorfolio.obtenerDatos().subscribe((data:any) =>{
+     this.datosPorfolio.obtenerProyecto().subscribe((data:any) =>{
        console.log(data);
-       this.proyectoList=data.proyecto;
+       this.proyectoList=data;
        
      }); 
    }

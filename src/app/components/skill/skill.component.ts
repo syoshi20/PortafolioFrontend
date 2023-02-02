@@ -9,19 +9,20 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 export class SkillComponent implements OnInit {
 
   @Input() skilList:any;
-  @Output() onDeleteEdu:EventEmitter<any>= new EventEmitter()
+  @Output() onDeleteSkill:EventEmitter<any>= new EventEmitter()
  
    constructor(private datosPorfolio:PorfolioService) { }
  
    ngOnInit(): void {
-     this.datosPorfolio.obtenerDatos().subscribe((data:any) =>{
-       console.log(data);
-       this.skilList=data.skill;
+     this.datosPorfolio.obtenerSkill().subscribe((data:any) =>{
+      
+      
+       this.skilList=data;
        
      }); 
    }
  
-   onDelete(){
-    
+   onDelete(skill:any){
+    this.onDeleteSkill.emit(skill);
    }
 }
