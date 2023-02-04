@@ -1,13 +1,16 @@
 <div class="card-body" >
     <ul class="items-list">
       <li >
-        <i class="material-symbols-outlined" style="float: right; color: red;">
-          close
+        <i class="material-symbols-outlined" 
+           style="float: right;margin-right: 50px;"
+           (click)="onDelete(experiencia)"
+           >
+           <div class="close">close</div>
           </i>
           <div class="cuadro">
        <h4 class="card-title">{{experiencia.nombreEmpresa}} <img src="">logo
-        <i  class="material-symbols-outlined" style="position: absolute;left: 50%; color: orange ;">
-          edit
+        <i  class="material-symbols-outlined" style="position: absolute;left: 50%;">
+          <div class="edit">edit</div>
           </i>   
       </h4>
       

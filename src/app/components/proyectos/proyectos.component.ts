@@ -11,7 +11,7 @@ import { ProyectoService } from 'src/app/servicios/proyecto.service';
 export class ProyectosComponent implements OnInit {
 
   @Input() proyectoList:Proyecto[]=[];
-  @Output() onDeleteEdu:EventEmitter<any>= new EventEmitter()
+  @Output() onDeleteProyecto:EventEmitter<any>= new EventEmitter()
  
    constructor(private serviceProyecto:ProyectoService) { }
  
@@ -23,8 +23,11 @@ export class ProyectosComponent implements OnInit {
      }); 
    }
  
-   onDelete(){
-    
-   }
+   deleteProyecto(proyecto:Proyecto){
+    console.log(proyecto);
+   this.serviceProyecto.deleteProyecto(proyecto).subscribe(()=>(
+      this.proyectoList= this.proyectoList.filter((t:Proyecto) => t.id !== proyecto.id)
+      ))
+  }
 
 }

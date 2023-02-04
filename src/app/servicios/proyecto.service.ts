@@ -20,15 +20,15 @@ export class ProyectoService {
   constructor(private http:HttpClient) { }
 
   obtenerProyecto():Observable<Proyecto[]>{
-    return this.http.get<Proyecto[]>(this.apiUrl+'/ver/proyecto');
+    return this.http.get<Proyecto[]>(`${this.apiUrl}/ver/proyecto`);
   }
   addProyecto(proyecto:Proyecto):Observable<Proyecto>{
-    return this.http.post<Proyecto>(this.apiUrl+'/new/proyecto',proyecto);
+    return this.http.post<Proyecto>(`${this.apiUrl}/new/proyecto`,proyecto);
   }
   editProyecto(proyecto:Proyecto):Observable<Proyecto>{
-    return this.http.put<Proyecto>(this.apiUrl+'/edit/proyecto',proyecto);
+    return this.http.put<Proyecto>(`${this.apiUrl}/edit/proyecto`,proyecto);
   }
   deleteProyecto(proyecto:Proyecto):Observable<void>{
-    return this.http.delete<void>(this.apiUrl+'/delete/proyecto/${proyecto.id}');
+    return this.http.delete<void>(`${this.apiUrl}/delete/proyecto/${proyecto.id}`);
   }
 }

@@ -11,7 +11,7 @@ import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 export class ExperienciasComponent implements OnInit {
 
   @Input() experienciaList:Experiencia[]=[];
-  @Output() onDeleteEdu:EventEmitter<any>= new EventEmitter()
+  @Output() onDeleteExperiencia:EventEmitter<any>= new EventEmitter()
  
    constructor(private serviceExperiencia:ExperienciaService) { }
  
@@ -23,7 +23,10 @@ export class ExperienciasComponent implements OnInit {
      }); 
    }
  
-   onDelete(){
-    
-   }
+   deleteExperiencia(experiencia:Experiencia){
+    console.log(experiencia);
+   this.serviceExperiencia.deleteExperiencia(experiencia).subscribe(()=>(
+      this.experienciaList= this.experienciaList.filter((t:Experiencia) => t.id !== experiencia.id)
+      ))
+  }
 }

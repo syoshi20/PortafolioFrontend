@@ -24,7 +24,7 @@ export class EducacionComponent implements OnInit {
   }
 
   deleteEducacion(educa:Educacion){
-    console.log("delete educa");
+    console.log(educa);
    this.serviceEducacion.deleteEducacion(educa).subscribe(()=>(
       this.educacionList= this.educacionList.filter((t:Educacion) => t.id !== educa.id)
       ))

@@ -8,7 +8,8 @@
 <app-item-skill 
 class="col-sm-6 col-md-3"
 *ngFor="let skill of skilList"
-[skill]="skill" 
+[skill]="skill"
+(onDeleteSkill)="deleteSkill(skill)" 
 >
 </app-item-skill>
 </div>

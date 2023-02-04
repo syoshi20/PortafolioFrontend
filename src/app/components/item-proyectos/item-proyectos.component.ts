@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit ,Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-item-proyectos',
@@ -7,10 +7,16 @@ import { Component, OnInit ,Input} from '@angular/core';
 })
 export class ItemProyectosComponent implements OnInit {
    @Input()proyecto:any;
+   @Output() onDeleteProyecto: EventEmitter<any>=new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onDelete(proyecto:any){
+    this.onDeleteProyecto.emit(proyecto);
+
   }
 
 }

@@ -5,6 +5,7 @@
   <app-item-experiencias
   *ngFor="let experiencia of experienciaList"
   [experiencia]="experiencia" 
+  (onDeleteExperiencia)="deleteExperiencia(experiencia)"
   >
 
   </app-item-experiencias> 

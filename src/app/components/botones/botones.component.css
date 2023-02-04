@@ -10,7 +10,8 @@
     cursor: pointer;
 }
 .material-symbols-outlined:hover{
-    background-color: rgb(112, 212, 87);
+    color: rgb(96, 252, 96);
+    border-color: rgb(96, 252, 96);
 }
 
  

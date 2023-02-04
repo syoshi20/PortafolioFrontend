@@ -1,5 +1,4 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { SkillService } from 'src/app/servicios/skill.service';
 import { Skill } from 'src/app/skill';
 
@@ -24,7 +23,10 @@ export class SkillComponent implements OnInit {
      }); 
    }
  
-   onDelete(skill:Skill){
-    this.onDeleteSkill.emit(skill);
-   }
+   deleteSkill(skill:Skill){
+    console.log(skill);
+   this.serviceSkill.deleteSkill(skill).subscribe(()=>(
+      this.skilList= this.skilList.filter((t:Skill) => t.id !== skill.id)
+      ))
+  }
 }

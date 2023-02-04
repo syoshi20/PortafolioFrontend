@@ -5,14 +5,17 @@
       <ul class="items-list">
         <li> 
           <h4 class="card-title">{{educa.titulo}}
-            <i  class="material-symbols-outlined" style="position: absolute;left: 50%; color: orange ;">
-            edit
+            <i  class="material-symbols-outlined"
+                id="edit" 
+                style="position: absolute;left: 50%; ">
+            <div class="edit">edit</div>
             </i>
-            <i class="material-symbols-outlined" 
-               style="float: right;margin-right: 50px; color: red;" 
+            <i class="material-symbols-outlined"
+               id="close"  
+               style="float: right;margin-right: 50px; " 
                (click)="onDelete(educa)"
             >
-            close
+            <div class="close">close</div>
             </i>
           </h4> 
 

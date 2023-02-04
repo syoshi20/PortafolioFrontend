@@ -1,10 +1,15 @@
 <div class="card-body">
     <h4 class="card-title">{{proyecto.nombre}}
-      <i  class="material-symbols-outlined" style="position: absolute;left: 50%; color: orange ;">
-        edit
+      <i  class="material-symbols-outlined" 
+          style="position: absolute;left: 50%;"
+          >
+        <div class="edit">edit</div>
         </i>
-        <i class="material-symbols-outlined" style="float: right;margin-right: 50px; color: red;">
-        close
+        <i class="material-symbols-outlined" 
+            style="float: right;margin-right: 50px;"
+            (click)="onDelete(proyecto)"
+        >
+        <div class="close">close</div>
         </i>
     </h4>
     <p class="card-text">{{proyecto.descripcion}}</p>

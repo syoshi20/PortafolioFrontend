@@ -20,11 +20,11 @@ export class PerfilService {
   constructor(private http:HttpClient) { }
 
   obtenerPerfil():Observable<Perfil[]>{
-    return this.http.get<Perfil[]>(this.apiUrl+'/ver/perfil');
+    return this.http.get<Perfil[]>(`${this.apiUrl}/ver/perfil`);
   }
   
   editPerfil(perfil:Perfil):Observable<Perfil>{
-    return this.http.put<Perfil>(this.apiUrl+'/edit/perfil',perfil);
+    return this.http.put<Perfil>(`${this.apiUrl}/edit/perfil`,perfil);
   }
 
 }

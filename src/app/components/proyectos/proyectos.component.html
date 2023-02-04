@@ -5,6 +5,7 @@
     <app-item-proyectos
     *ngFor="let proyecto of proyectoList"
     [proyecto]="proyecto"
+    (onDeleteProyecto)="deleteProyecto(proyecto)"
     >
 
     </app-item-proyectos>

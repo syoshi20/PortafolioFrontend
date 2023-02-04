@@ -83,3 +83,9 @@ body{
 .material-symbols-outlined{
     cursor: pointer;
   }
+  .material-symbols-outlined:hover .edit{
+    color: orange;
+  }
+  .material-symbols-outlined:hover .close{
+    color: red;
+  }
