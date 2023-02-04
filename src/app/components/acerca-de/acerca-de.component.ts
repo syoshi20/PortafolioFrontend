@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { Perfil } from 'src/app/perfil';
+import { PerfilService } from 'src/app/servicios/perfil.service';
+
 
 
 @Component({
@@ -9,12 +11,12 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class AcercaDeComponent implements OnInit {
 
-  miPorfolio:any;
+  miPorfolio:Perfil[]=[];
 
-  constructor(private datosPorfolio:PorfolioService) { }
+  constructor(private servicePerfil:PerfilService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe((data:any) =>{
+    this.servicePerfil.obtenerPerfil().subscribe((data:Perfil[]) =>{
       console.log(data);
       this.miPorfolio=data;
       

@@ -1,5 +1,7 @@
 import { Component, OnInit , Output, EventEmitter, Input } from '@angular/core';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { Educacion } from 'src/app/educacion';
+import { EducacionService } from 'src/app/servicios/educacion.service';
+
 
 @Component({
   selector: 'app-educacion',
@@ -8,20 +10,24 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class EducacionComponent implements OnInit {
 
- @Input() educacionList:any;
- @Output() onDeleteEdu:EventEmitter<any>= new EventEmitter()
+ @Input() educacionList:Educacion[]=[];
+ @Output() onDeleteEduca:EventEmitter<any>= new EventEmitter()
 
-  constructor(private datosPorfolio:PorfolioService) { }
+  constructor(private serviceEducacion:EducacionService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerEducacion().subscribe(data =>{
+    this.serviceEducacion.obtenerEducacion().subscribe((data:Educacion[]) =>{
       console.log(data);
       this.educacionList=data;
       
     }) 
   }
 
-  onDelete(){
-   
+  deleteEducacion(educa:Educacion){
+    console.log("delete educa");
+   this.serviceEducacion.deleteEducacion(educa).subscribe(()=>(
+      this.educacionList= this.educacionList.filter((t:Educacion) => t.id !== educa.id)
+      ))
   }
+  
 }

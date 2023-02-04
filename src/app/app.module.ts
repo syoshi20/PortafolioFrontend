@@ -23,6 +23,12 @@ import { ItemProyectosComponent } from './components/item-proyectos/item-proyect
 import { ItemSkillComponent } from './components/item-skill/item-skill.component';
 import { ItemExperienciasComponent } from './components/item-experiencias/item-experiencias.component';
 
+import { EducacionService } from './servicios/educacion.service';
+import { ExperienciaService } from './servicios/experiencia.service';
+import { PerfilService } from './servicios/perfil.service';
+import { ProyectoService } from './servicios/proyecto.service';
+import { SkillService } from './servicios/skill.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +57,13 @@ import { ItemExperienciasComponent } from './components/item-experiencias/item-e
     NgCircleProgressModule.forRoot({
       "showSubtitle": false})
   ],
-  providers: [],
+  providers: [
+    EducacionService,
+    ExperienciaService,
+    PerfilService,
+    ProyectoService,
+    SkillService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

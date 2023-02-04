@@ -13,15 +13,14 @@ const httpOptions={
   providedIn: 'root'
 })
 export class PorfolioService {
-    private apiUrl='http://localhost:5000';
+    private apiUrl='http://localhost:5000/';
+    
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
     return this.http.get<any>(this.apiUrl+'/porfolio');
   }
-  obtenerEducacion():Observable<any>{
-    return this.http.get<any>(this.apiUrl+'/educacion');
-  }
+ 
   obtenerSkill():Observable<any>{
     return this.http.get<any>(this.apiUrl+'/skill');
   }
@@ -32,8 +31,9 @@ export class PorfolioService {
     return this.http.get<any>(this.apiUrl+'/experiencia');
   }
 
-  deleteDato(dato:any):Observable<any>{
-    const url= '${this.apiUrl}/${dato.id}';
+  deleteEducacion(educa:any):Observable<any>{
+    
+    const url= this.apiUrl+'/${educa.id}'
     return this.http.delete<any>(url)
   }
 

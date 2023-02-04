@@ -6,9 +6,11 @@
   <div class="card-header">Educacion
     <app-botones color="grey" ></app-botones>
   </div>
+ 
 <app-item-educacion 
 *ngFor="let educa of educacionList"
 [educa]="educa"
+(onDeleteEduca)="deleteEducacion(educa)"
 >
 </app-item-educacion>
 </div>

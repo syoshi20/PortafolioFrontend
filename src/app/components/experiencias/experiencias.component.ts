@@ -1,5 +1,7 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { Experiencia } from 'src/app/experiencia';
+import { ExperienciaService } from 'src/app/servicios/experiencia.service';
+
 
 @Component({
   selector: 'app-experiencias',
@@ -8,13 +10,13 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class ExperienciasComponent implements OnInit {
 
-  @Input() experienciaList:any;
+  @Input() experienciaList:Experiencia[]=[];
   @Output() onDeleteEdu:EventEmitter<any>= new EventEmitter()
  
-   constructor(private datosPorfolio:PorfolioService) { }
+   constructor(private serviceExperiencia:ExperienciaService) { }
  
    ngOnInit(): void {
-     this.datosPorfolio.obtenerExperiencia().subscribe((data:any) =>{
+     this.serviceExperiencia.obtenerExperiencia().subscribe((data:Experiencia[]) =>{
        console.log(data);
        this.experienciaList=data;
        
