@@ -1,64 +1,71 @@
-<form class="add-form" (ngSubmit)="onSubmit()">
-    <div class="form-control">
-        <label form="text">Nombre</label>
-        <input 
-            type="text" 
-            name="nombre" 
-            id="nombre" 
-            placeholder="Add nombre"
-            [(ngModel)]="nombre"
-        />
-    </div>
-    <div class="form-control">
-        <label form="text">descripcion</label>
-        <input 
+<div class="formulario">
+    <div class="card border-success mb-3" style="max-width: 20rem;">
+        <div class="card-header">Formulario alta</div>
+        <form class="add-form" (ngSubmit)="onSubmit()">
+                <div class="form-control"style="background-color: grey;">
+                <div class="form-group">
+             <label form="text">Nombre de empresa</label>
+                 <input 
+                type="text" 
+               name="nombreEmpresa" 
+               id="nombreEmpresa" 
+                placeholder="Add nombre de empresa"
+             [(ngModel)]="nombreEmpresa"
+             />
+              </div>
+             <div class="form-group">
+               <label form="text">Puesto</label>
+             <input 
+               type="text" 
+            name="puesto" 
+               id="puesto" 
+            placeholder="Add puesto"
+            [(ngModel)]="puesto"
+              />
+             </div>
+            <div class="form-group">
+          <label form="text">Descripcion</label>
+          <input 
             type="text" 
             name="descripcion" 
             id="descripcion" 
             placeholder="Add descripcion"
             [(ngModel)]="descripcion"
-        />
-    </div>
-    <div class="form-control">
-        <label form="text">logo</label>
-        <input 
-            type="text" 
-            name="logo" 
-            id="logo" 
+         />
+             </div>
+           <div class="form-group">
+           <label form="text">Logo</label>
+               <input 
+               type="text" 
+            name="urlLogo" 
+            id="urlLogo" 
             placeholder="Add logo"
-            [(ngModel)]="logo"
-        />
-    </div>
-    <div class="form-control">
-        <label form="text">estado</label>
-        <input 
-            type="checkbox" 
-            name="estado" 
-            id="estado" 
-            placeholder="Add estado"
-            [(ngModel)]="estado"
-        />
-    </div>
-    <div class="form-control">
-        <label form="text">desde</label>
-        <input 
-            type="text" 
+            [(ngModel)]="urlLogo"
+          />
+              </div>
+          <div class="form-group">
+           <label form="text">Desde</label>
+          <input 
+            type="date" 
             name="desde" 
             id="desde" 
             placeholder="Add desde"
             [(ngModel)]="desde"
         />
-    </div>
-    <div class="form-control">
-        <label form="text">hasta</label>
+          </div>
+          <div class="form-group">
+        <label form="text">Hasta</label>
         <input 
-            type="text" 
+            type="date" 
             name="hasta" 
             id="hasta" 
             placeholder="Add hasta"
             [(ngModel)]="hasta"
-        />
+         />
+         </div>
+         <input type="submit" value="Save Experiencias"class="btn btn-outline-success"style="margin-top: 10px;">
+            </div>
+     </form>
     </div>
-    <input type="submit" value="Save Experiencias">
-</form>
+</div>
 

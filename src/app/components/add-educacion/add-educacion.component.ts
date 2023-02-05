@@ -1,4 +1,5 @@
 import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { Educacion } from 'src/app/educacion';
 
 @Component({
   selector: 'app-add-educacion',
@@ -9,13 +10,12 @@ export class AddEducacionComponent implements OnInit {
 
   @Output() onAddEducacion: EventEmitter<any>= new EventEmitter();
 
-
-  nombre:string="";
   titulo:string="";
-  logo:string="";
+  nombreInstituto:string="";
+  urlLogo:string="";
   estado:boolean=false;
-  desde:string="";
-  hasta:string="";
+  desde:string= "";
+  hasta:string= "";
 
   constructor() { }
 
@@ -27,8 +27,8 @@ export class AddEducacionComponent implements OnInit {
       alert("Please add a titulo");
       return
     }
-    const {nombre,titulo,logo,estado,desde,hasta}= this
-    const newEducacion= {nombre,titulo,logo,estado,desde,hasta}
+    const {titulo,nombreInstituto,urlLogo,estado,desde,hasta}= this
+    const newEducacion= {titulo,nombreInstituto,urlLogo,estado,desde,hasta}
     this.onAddEducacion.emit(newEducacion);
   }
 

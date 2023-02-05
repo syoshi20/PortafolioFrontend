@@ -29,4 +29,9 @@ export class ExperienciasComponent implements OnInit {
       this.experienciaList= this.experienciaList.filter((t:Experiencia) => t.id !== experiencia.id)
       ))
   }
+  addExperiencia(experiencia:Experiencia){
+    console.log(experiencia);
+    this.serviceExperiencia.addExperiencia(experiencia).subscribe(experiencia =>
+      this.experienciaList.push(experiencia))
+  }
 }

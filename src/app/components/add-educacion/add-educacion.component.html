@@ -1,46 +1,43 @@
-<div class="modal">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Add Educacion</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true"></span>
-          </button>
-        </div>
-        <div class="modal-body">
+<div class="formulario">
+    <div class="card border-success mb-3" style="max-width: 20rem;">
+        <div class="card-header">Formulario alta</div>
+    
+        
             <form class="add-form" (ngSubmit)="onSubmit()">
-                <div class="form-control">
-                    <label form="text">Nombre</label>
-                    <input 
-                        type="text" 
-                        name="nombre" 
-                        id="nombre" 
-                        placeholder="Add nombre"
-                        [(ngModel)]="nombre"
-                    />
-                </div>
-                <div class="form-control">
-                    <label form="text">titulo</label>
+                <div class="form-control" style="background-color: grey;">
+                    <div class="form-group">
+                    <label form="text">Titulo</label><br>
                     <input 
                         type="text" 
                         name="titulo" 
                         id="titulo" 
                         placeholder="Add titulo"
                         [(ngModel)]="titulo"
-                    />
+                    /><br>
                 </div>
-                <div class="form-control">
-                    <label form="text">logo</label>
+                <div class="form-group">
+                    <label form="text">Nombre de Instituto</label><br>
                     <input 
                         type="text" 
-                        name="logo" 
-                        id="logo" 
-                        placeholder="Add logo"
-                        [(ngModel)]="logo"
-                    />
+                        name="nombreInstituto" 
+                        id="nombreInstituto" 
+                        placeholder="Add nombre de Instituto"
+                        [(ngModel)]="nombreInstituto"
+                    /><br>
                 </div>
-                <div class="form-control">
-                    <label form="text">estado</label>
+               
+                <div class="form-group">
+                    <label form="text">Logo</label><br>
+                    <input 
+                        type="text" 
+                        name="urlLogo" 
+                        id="urlLogo" 
+                        placeholder="Add url logo"
+                        [(ngModel)]="urlLogo"
+                    /><br>
+                </div>
+                <div class="form-group">
+                    <label form="text">Cursando</label><br>
                     <input 
                         type="checkbox" 
                         name="estado" 
@@ -49,33 +46,31 @@
                         [(ngModel)]="estado"
                     />
                 </div>
-                <div class="form-control">
-                    <label form="text">desde</label>
+                <div class="form-group">
+                    <label form="text">Desde</label><br>
                     <input 
-                        type="text" 
+                        type="date" 
                         name="desde" 
                         id="desde" 
                         placeholder="Add desde"
                         [(ngModel)]="desde"
-                    />
+                    /><br>
                 </div>
-                <div class="form-control">
-                    <label form="text">hasta</label>
+                <div class="form-group">
+                    <label form="text">Hasta</label><br>
                     <input 
-                        type="text" 
+                        type="date" 
                         name="hasta" 
                         id="hasta" 
                         placeholder="Add hasta"
                         [(ngModel)]="hasta"
-                    />
+                    /><br>
+                </div>
+                <input type="submit" value="Save Educacion"class="btn btn-outline-success" style="margin-top: 10px;" >
                 </div>
             </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Save changes</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
+            
     </div>
-  </div>
+</div>
+ 
 

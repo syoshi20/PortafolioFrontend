@@ -4,7 +4,9 @@
   </div>
 <div class="card-body"> 
   <div class="row">
-    
+ <app-add-skill
+ (onAddSkill)="addSkill($event)">
+ </app-add-skill>   
 <app-item-skill 
 class="col-sm-6 col-md-3"
 *ngFor="let skill of skilList"

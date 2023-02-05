@@ -29,5 +29,12 @@ export class EducacionComponent implements OnInit {
       this.educacionList= this.educacionList.filter((t:Educacion) => t.id !== educa.id)
       ))
   }
+  addEducacion(educa:Educacion){
+    console.log(educa);
+    this.serviceEducacion.addEducacion(educa).subscribe(educa =>
+      this.educacionList.push(educa))
+  }
+
+
   
 }

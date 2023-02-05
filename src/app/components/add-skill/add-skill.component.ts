@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Skill } from 'src/app/skill';
 
 @Component({
   selector: 'app-add-skill',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-skill.component.css']
 })
 export class AddSkillComponent implements OnInit {
+  @Output() onAddSkill: EventEmitter<any>= new EventEmitter();
+  
   nombre:string="";
   porcentaje:number=0;
 
@@ -20,6 +23,7 @@ export class AddSkillComponent implements OnInit {
     }
     const {nombre,porcentaje}= this
     const newSkill= {nombre,porcentaje}
+    this.onAddSkill.emit(newSkill);
   }
 
 }

@@ -23,7 +23,7 @@ export class ProyectoService {
     return this.http.get<Proyecto[]>(`${this.apiUrl}/ver/proyecto`);
   }
   addProyecto(proyecto:Proyecto):Observable<Proyecto>{
-    return this.http.post<Proyecto>(`${this.apiUrl}/new/proyecto`,proyecto);
+    return this.http.post<Proyecto>(`${this.apiUrl}/new/proyecto`,proyecto,httpOptions);
   }
   editProyecto(proyecto:Proyecto):Observable<Proyecto>{
     return this.http.put<Proyecto>(`${this.apiUrl}/edit/proyecto`,proyecto);

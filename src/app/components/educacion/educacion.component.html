@@ -6,7 +6,11 @@
   <div class="card-header">Educacion
     <app-botones color="grey" ></app-botones>
   </div>
- 
+ <app-add-educacion
+  (onAddEducacion)="addEducacion($event)"
+ >
+ </app-add-educacion>
+
 <app-item-educacion 
 *ngFor="let educa of educacionList"
 [educa]="educa"
@@ -14,4 +18,5 @@
 >
 </app-item-educacion>
 </div>
+
 </section>

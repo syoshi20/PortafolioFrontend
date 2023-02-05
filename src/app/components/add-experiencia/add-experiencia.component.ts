@@ -1,5 +1,6 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Experiencia } from 'src/app/experiencia';
 
 @Component({
   selector: 'app-add-experiencia',
@@ -7,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-experiencia.component.css']
 })
 export class AddExperienciaComponent implements OnInit {
-  nombre:string="";
+  @Output() onAddExperiencia: EventEmitter<any>= new EventEmitter();
+  
+  nombreEmpresa:string="";
+  puesto:string=""
   descripcion:string="";
-  logo:string="";
-  estado:boolean=false;
+  urlLogo:string="";
   desde:string="";
   hasta:string="";
 
@@ -20,12 +23,13 @@ export class AddExperienciaComponent implements OnInit {
   }
 
   onSubmit(){
-    if(this.nombre.length == 0){
-      alert("Please add a empresa");
+    if(this.puesto.length == 0){
+      alert("Please add a puesto");
       return
     }
-    const {nombre,descripcion,logo,estado,desde,hasta}= this
-    const newExperiencia= {nombre,descripcion,logo,estado,desde,hasta}
+    const {nombreEmpresa,puesto,descripcion,urlLogo,desde,hasta}= this
+    const newExperiencia= {nombreEmpresa,puesto,descripcion,urlLogo,desde,hasta}
+    this.onAddExperiencia.emit(newExperiencia);
   }
 
 }

@@ -2,6 +2,10 @@
     <div class="card-header">Experiencias
       <app-botones color="grey" ></app-botones>
     </div>
+    <app-add-experiencia
+    (onAddExperiencia)="addExperiencia($event)"
+    >
+    </app-add-experiencia>
   <app-item-experiencias
   *ngFor="let experiencia of experienciaList"
   [experiencia]="experiencia" 

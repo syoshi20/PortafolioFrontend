@@ -29,5 +29,10 @@ export class ProyectosComponent implements OnInit {
       this.proyectoList= this.proyectoList.filter((t:Proyecto) => t.id !== proyecto.id)
       ))
   }
+  addProyecto(proyecto:Proyecto){
+    console.log(proyecto);
+    this.serviceProyecto.addProyecto(proyecto).subscribe(proyecto =>
+      this.proyectoList.push(proyecto))
+  }
 
 }

@@ -23,7 +23,7 @@ export class ExperienciaService {
     return this.http.get<Experiencia[]>(`${this.apiUrl}/ver/experiencia`);
   }
   addExperiencia(experiencia:Experiencia):Observable<Experiencia>{
-    return this.http.post<Experiencia>(`${this.apiUrl}/new/experiencia`,experiencia);
+    return this.http.post<Experiencia>(`${this.apiUrl}/new/experiencia`,experiencia,httpOptions);
   }
   editExperiencia(experiencia:Experiencia):Observable<Experiencia>{
     return this.http.put<Experiencia>(`${this.apiUrl}/edit/experiencia`,experiencia);

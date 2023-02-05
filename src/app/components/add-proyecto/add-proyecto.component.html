@@ -1,33 +1,41 @@
-<form class="add-form" (ngSubmit)="onSubmit()">
-    <div class="form-control">
-        <label form="text">Nombre</label>
-        <input 
+<div class="formulario">
+    <div class="card border-success mb-3" style="max-width: 20rem;">
+        <div class="card-header">Formulario alta</div>
+
+        <form class="add-form" (ngSubmit)="onSubmit()">
+            <div class="form-control"style="background-color: grey;">
+                <div class="form-group">
+            <label form="text">Nombre</label>
+            <input 
             type="text" 
             name="nombre" 
             id="nombre" 
             placeholder="Add nombre"
             [(ngModel)]="nombre"
-        />
-    </div>
-    <div class="form-control">
-        <label form="text">descripcion</label>
-        <input 
+         />
+            </div>
+            <div class="form-group">
+            <label form="text">Descripcion</label>
+            <input 
             type="text" 
             name="descripcion" 
             id="descripcion" 
             placeholder="Add descripcion"
             [(ngModel)]="descripcion"
         />
-    </div>
-    <div class="form-control">
-        <label form="text">url</label>
-        <input 
+            </div>
+            <div class="form-group">
+            <label form="text">Url</label>
+            <input 
             type="text" 
             name="url" 
             id="url" 
             placeholder="Add url"
             [(ngModel)]="url"
         />
+        </div>
+        <input type="submit" value="Save Proyecto"class="btn btn-outline-success"style="margin-top: 10px;">
+        </div>
+        </form>
     </div>
-    <input type="submit" value="Save Proyecto">
-</form>
+</div>

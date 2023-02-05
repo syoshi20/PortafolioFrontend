@@ -2,6 +2,9 @@
     <div class="card-header">Proyectos
       <app-botones color="grey" ></app-botones>
     </div>
+    <app-add-proyecto
+    (onAddProyecto)="addProyecto($event)">
+    </app-add-proyecto>
     <app-item-proyectos
     *ngFor="let proyecto of proyectoList"
     [proyecto]="proyecto"

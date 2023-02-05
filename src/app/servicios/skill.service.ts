@@ -23,7 +23,7 @@ export class SkillService {
     return this.http.get<Skill[]>(`${this.apiUrl}/ver/skill`);
   }
   addSkill(skill:Skill):Observable<Skill>{
-    return this.http.post<Skill>(`${this.apiUrl}/new/skill`,skill);
+    return this.http.post<Skill>(`${this.apiUrl}/new/skill`,skill,httpOptions);
   }
   editSkill(skill:Skill):Observable<Skill>{
     return this.http.put<Skill>(`${this.apiUrl}/edit/skill`,skill);

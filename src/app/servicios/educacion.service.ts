@@ -24,7 +24,7 @@ export class EducacionService {
     return this.http.get<Educacion[]>(`${this.apiUrl}/ver/educacion`);
   }
   addEducacion(educacion:Educacion):Observable<Educacion>{
-    return this.http.post<Educacion>(`${this.apiUrl}/new/educacion`,educacion);
+    return this.http.post<Educacion>(`${this.apiUrl}/new/educacion`,educacion,httpOptions);
   }
   editEducacion(educacion:Educacion):Observable<Educacion>{
     return this.http.put<Educacion>(`${this.apiUrl}/edit/educacion`,educacion);

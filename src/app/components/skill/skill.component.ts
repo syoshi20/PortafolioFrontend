@@ -29,4 +29,9 @@ export class SkillComponent implements OnInit {
       this.skilList= this.skilList.filter((t:Skill) => t.id !== skill.id)
       ))
   }
+  addSkill(skill:Skill){
+    console.log(skill);
+    this.serviceSkill.addSkill(skill).subscribe(skill =>
+      this.skilList.push(skill))
+  }
 }
